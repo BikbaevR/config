@@ -1,0 +1,31 @@
+{
+    "config": {
+        "config_name": "config.json",
+        "config_elements": [
+            {
+                "name": "test",
+                "data_type": "int",
+                "value": 1,
+                "description": "test"
+            },
+            {
+                "name": "test1",
+                "data_type": "str",
+                "value": "2",
+                "description": "test"
+            },
+            {
+                "name": "test2",
+                "data_type": "bool",
+                "value": true,
+                "description": "test"
+            },
+            {
+                "name": "test3",
+                "data_type": "int",
+                "value": null,
+                "description": "test"
+            }
+        ]
+    }
+}
