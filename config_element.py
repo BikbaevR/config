@@ -7,9 +7,12 @@ class ConfigElement:
         self.__data_type = data_type
         self.__value = self.__parse_to_data_type(data_type, value)
         self.__description = description
-        self.__validate_type(data_type, name)
+        self.__validate_type(data_type, name, value)
 
-    def __validate_type(self, data_type: str, name: str):
+    def __validate_type(self, data_type: str, name: str, value: str):
+        if len(str(name)) == 0 or len(str(data_type)) == 0:
+            raise ValueError(f'Заполнены не все поля')
+
         if data_type not in self.allowed_data_types:
             raise ValueError(f'Не верный тип данных [{data_type}] для элемента: {name}')
         return True
