@@ -1,7 +1,7 @@
 import os
 import json
 
-from config_element_class import ConfigElement
+from config_element import ConfigElement
 
 class Config:
     def __init__(self, directory: str, config_name: str):
