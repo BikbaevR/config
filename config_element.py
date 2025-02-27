@@ -21,6 +21,8 @@ class ConfigElement:
     def __parse_to_data_type(self, data_type: str, name, value: str):
         if value is None:
             return None
+        if value == 'None':
+            return None
         if len(str(value)) == 0:
             return None
 

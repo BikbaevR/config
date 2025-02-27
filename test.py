@@ -21,6 +21,22 @@ try:
         dependency='element1'
     )
 
+    config.register_config_element(
+        name='element3',
+        data_type='bool',
+        value='True',
+        description='Описание третьего элемента',
+        dependency=None
+    )
+
+    config.register_config_element(
+        name='element4',
+        data_type='str',
+        value='Тест',
+        description='Описание четвертого элемента',
+        dependency='element3'
+    )
+
     config.create_config_file()
 
     config.read_config_file()

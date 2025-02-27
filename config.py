@@ -89,7 +89,7 @@ class Config:
                     if element.get_name().strip() == dependency_element_name.strip():
                         if element.get_data_type() == 'bool':
                             if element.get_value() is True:
-                                if len(value.strip()) == 0:
+                                if len(value.strip()) == 0 or value.strip().lower() == 'none':
                                     raise ValueError(f'Элемент [{element_name}] не может быть пустым')
                                 else:
                                     return True
