@@ -1,11 +1,11 @@
 import os
-import json
+import sys
 
-from config_element import ConfigElement
+from .config_element import ConfigElement
 
 class Config:
     def __init__(self, directory: str, config_name: str):
-        self.__main_directory = os.path.dirname(directory)
+        self.__main_directory = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(os.path.abspath(directory))
         self.__config_name = config_name + '.cfg'
         self.__config_file_full_path = os.path.join(self.__main_directory, self.__config_name)
 
